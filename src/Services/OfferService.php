@@ -149,6 +149,7 @@ class OfferService
     {
         $this->beforeUpdateOffer($model, $offer);
         $this->parseSpecifications($model, $offer);
+        $this->parseProperties($model, $offer);
         $this->parsePrice($model, $offer);
         $this->afterUpdateOffer($model, $offer);
     }
@@ -161,6 +162,17 @@ class OfferService
     {
         foreach ($offer->getSpecifications() as $specification) {
             $model->setSpecification1c($specification);
+        }
+    }
+
+    /**
+     * @param OfferInterface $model
+     * @param Offer $offer
+     */
+    protected function parseProperties(OfferInterface $model, Offer $offer): void
+    {
+        foreach ($offer->getProperties() as $property) {
+            $model->setOfferProperty1c($property);
         }
     }
 
