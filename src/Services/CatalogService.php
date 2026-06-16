@@ -57,7 +57,7 @@ class CatalogService extends AbstractService
     {
         $this->authService->auth($request);
         $this->loaderService->clearImportDirectory();
-        $zipEnable = function_exists('zip_open') && $this->config->isUseZip();
+        $zipEnable = class_exists(\ZipArchive::class) && $this->config->isUseZip();
         $response = 'zip=' . ($zipEnable ? 'yes' : 'no') . "\n";
         $response .= 'file_limit=' . $this->config->getFilePart();
 
