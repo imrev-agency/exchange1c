@@ -1,5 +1,5 @@
 {
-  "name": "alex8bits/exchange1c",
+  "name": "imrev-agency/exchange1c",
   "type": "library",
   "description": "Catalog Loader from 1c - CommerceML protocol",
   "keywords": [
@@ -8,7 +8,7 @@
     "1c-exchange",
     "1c-php"
   ],
-  "homepage": "https://github.com/alex8bits/exchange1c",
+  "homepage": "https://github.com/imrev-agency/exchange1c",
   "license": "MIT",
   "authors": [
     {
@@ -35,9 +35,15 @@
     "php": ">=8.0",
     "ext-zip": "*",
     "ext-simplexml": "*",
-    "alex8bits/commerceml": "^1.1.0",
+    "imrev-agency/commerceml": "^1.1.0",
     "illuminate/contracts": "^10|^11|^12"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/imrev-agency/php-commerceml.git"
+    }
+  ],
   "extra": {
     "laravel": {
       "providers": [
